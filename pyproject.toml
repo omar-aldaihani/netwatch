@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netwatch"
+version = "1.0.0"
+description = "Passive network security monitor: alerts on new devices, ARP spoofing and new services, with a live dashboard. Standard library only."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Omar Aldaihani" }]
+keywords = ["network", "security", "monitoring", "arp-spoofing", "intrusion-detection", "dashboard"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: System :: Networking :: Monitoring",
+  "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/omar-aldaihani/netwatch"
+
+[project.scripts]
+netwatch = "netwatch.cli:main"
+
+[tool.setuptools]
+packages = ["netwatch"]
